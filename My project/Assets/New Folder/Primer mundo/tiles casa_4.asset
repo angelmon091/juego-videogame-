@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: tiles casa_4
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -5441870490422408945, guid: a94ab2c5220e5044f9db38493577d6d9, type: 3}
+  m_Sprite: {fileID: -5441870490422408945, guid: 32404cc2bda00f848affee1c3b0ea69b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
