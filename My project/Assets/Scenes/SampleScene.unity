@@ -693,7 +693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 5
-  animator: {fileID: 0}
+  animator: {fileID: 1373071150}
 --- !u!1 &1646680898
 GameObject:
   m_ObjectHideFlags: 0
