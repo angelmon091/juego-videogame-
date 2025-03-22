@@ -71922,7 +71922,7 @@ Transform:
   m_GameObject: {fileID: 776663103}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9, y: 7.55, z: -10}
+  m_LocalPosition: {x: -2.943, y: 8.979, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -71939,6 +71939,8 @@ GameObject:
   - component: {fileID: 836487529}
   - component: {fileID: 836487528}
   - component: {fileID: 836487527}
+  - component: {fileID: 836487531}
+  - component: {fileID: 836487530}
   m_Layer: 0
   m_Name: GANZO_CAMINAR_0
   m_TagString: Untagged
@@ -72014,7 +72016,7 @@ SpriteRenderer:
   m_SortingOrder: 4
   m_Sprite: {fileID: 8974895298716439040, guid: d90adad2d03bfb04ebccbfb5cee89435, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.3, y: 0.32}
@@ -72032,12 +72034,75 @@ Transform:
   m_GameObject: {fileID: 836487526}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.15, y: 6.45, z: 0}
+  m_LocalPosition: {x: -0.994, y: 6.571, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &836487530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836487526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de92fd020f7034a4192c79908101ec31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jugador: {fileID: 1373071148}
+  velocidad: 2
+  rangoDeAtaque: 1.5
+  "da\xF1o": 10
+  animator: {fileID: 836487527}
+--- !u!61 &836487531
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836487526}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.021627158, y: -0.021627188}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.9375, y: 1}
+    newSize: {x: 0.3, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.7298793, y: 0.9567456}
+  m_EdgeRadius: 0
 --- !u!1 &1373071146
 GameObject:
   m_ObjectHideFlags: 0
@@ -72123,7 +72188,7 @@ Transform:
   m_GameObject: {fileID: 1373071146}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9, y: 7.55, z: 0}
+  m_LocalPosition: {x: -2.943, y: 8.979, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -72193,8 +72258,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec4f52e82ecf10242a31bf10e35ebbda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 5
-  animator: {fileID: 1373071150}
 --- !u!1 &1498850676
 GameObject:
   m_ObjectHideFlags: 0
@@ -77986,7 +78049,7 @@ Transform:
   m_GameObject: {fileID: 1636281991}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9, y: 7.55, z: -10}
+  m_LocalPosition: {x: -2.943, y: 8.979, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
