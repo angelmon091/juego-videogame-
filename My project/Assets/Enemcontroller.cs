@@ -1,10 +1,11 @@
 using UnityEngine;
+using System;
 
 public class Enemcontroller : MonoBehaviour
 {
     public Transform jugador; // Referencia al jugador
     public float velocidad = 2f; // Velocidad de movimiento
-    public float rangoDeAtaque = 1.5f; // Distancia para atacar
+    public float rangoDeAtaque = 5f; // Distancia para atacar
     public int daño = 10; // Daño al jugador
     public Animator animator; // Referencia al Animator
 
@@ -12,6 +13,25 @@ public class Enemcontroller : MonoBehaviour
     {
         // Calcular la distancia al jugador
         float distancia = Vector2.Distance(transform.position, jugador.position);
+
+        float velocidadX = Input.GetAxis("Horizontal") * Time.deltaTime * velocidad;
+
+        float velocidadY = Input.GetAxis("Vertical") * Time.deltaTime * velocidad;
+
+        animator.SetFloat("movement", Math.Abs(velocidadX * velocidad));
+
+        if (velocidadX < 0)
+        {
+            transform.localScale = new Vector2(-1, 1);
+        }
+        else if (velocidadX > 0)
+        {
+            transform.localScale = new Vector2(1, 1);
+        }
+
+        Vector2 posicion = transform.position;
+
+        transform.position = new Vector2(velocidadX + posicion.x, posicion.y + velocidadY);
 
         // Moverse hacia el jugador si está fuera del rango de ataque
         if (distancia > rangoDeAtaque)
@@ -22,6 +42,7 @@ public class Enemcontroller : MonoBehaviour
         else
         {
             AtacarJugador();
+            
         }
     }
 
