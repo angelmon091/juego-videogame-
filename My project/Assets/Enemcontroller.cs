@@ -8,44 +8,20 @@ public class Enemcontroller : MonoBehaviour
     public int daño = 10; // Daño al jugador
     public Animator animator; // Referencia al Animator
 
-    private bool atacando = false; // Para controlar el estado de ataque
-
     private void Update()
     {
         // Calcular la distancia al jugador
         float distancia = Vector2.Distance(transform.position, jugador.position);
 
-        float velocidadX = Input.GetAxis("Horizontal") * Time.deltaTime * velocidad;
-
-        float velocidadY = Input.GetAxis("Vertical") * Time.deltaTime * velocidad;
-
-        animator.SetFloat("movement", velocidadX * velocidad);
-
-        if (velocidadX < 0)
-        {
-            transform.localScale = new Vector2(-1, 1);
-        }
-        else if (velocidadX > 0)
-        {
-            transform.localScale = new Vector2(1, 1);
-        }
-
-        Vector2 posicion = transform.position;
-
-        transform.position = new Vector2(velocidadX + posicion.x, posicion.y + velocidadY);
-
+        // Moverse hacia el jugador si está fuera del rango de ataque
         if (distancia > rangoDeAtaque)
         {
             MoverHaciaJugador();
             animator.SetBool("isAtacando", false); // Desactiva la animación de ataque
-            atacando = false; // Resetea el estado de ataque
         }
         else
         {
-            if (!atacando) // Solo atacar si no está atacando actualmente
-            {
-                AtacarJugador();
-            }
+            AtacarJugador();
         }
     }
 
@@ -58,21 +34,10 @@ public class Enemcontroller : MonoBehaviour
 
     private void AtacarJugador()
     {
+        // Lógica para atacar al jugador
         animator.SetBool("isAtacando", true); // Activa la animación de ataque
-        atacando = true; // Cambia el estado de ataque
-
-        // Lógica para aplicar daño al jugador (puedes implementar aquí)
         Debug.Log("Atacando al jugador, daño: " + daño);
-
-        // Después de un breve retraso, desactiva la animación de ataque
-        Invoke("FinalizarAtaque", 0.5f); // Ajusta el tiempo según la duración de la animación
-    }
-
-    private void FinalizarAtaque()
-    {
-        animator.SetBool("isAtacando", false); // Desactiva la animación de ataque
-        atacando = false; // Permite un nuevo ataque
+        // Aquí puedes añadir lógica para aplicar daño al jugador
     }
 }
-
 

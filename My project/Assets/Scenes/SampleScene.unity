@@ -92561,7 +92561,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 2.525
+  orthographic size: 2.53
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -92862,7 +92862,7 @@ SpriteRenderer:
   m_SortingOrder: 4
   m_Sprite: {fileID: 8974895298716439040, guid: d90adad2d03bfb04ebccbfb5cee89435, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.3, y: 0.32}
