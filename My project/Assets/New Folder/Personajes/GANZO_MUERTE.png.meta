@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: 2249aa816002fef41a42d34c8637a3c5
+guid: e9851618f2150364f926c3c0a9bc782a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 849186861834659194
-    second: GANZO_ESTATICO_0
+      213: 4860370515339447280
+    second: GANZO_MUERTE_0
   - first:
-      213: 4589727890130509311
-    second: GANZO_ESTATICO_1
-  - first:
-      213: -5719592732540573726
-    second: GANZO_ESTATICO_2
-  - first:
-      213: -7273859271863570483
-    second: GANZO_ESTATICO_3
+      213: 6420659394773323782
+    second: GANZO_MUERTE_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -60,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -109,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GANZO_ESTATICO_0
+      name: GANZO_MUERTE_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 34
         y: 0
-        width: 30
-        height: 32
+        width: 28
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a75659f93fae8cb00800000000000000
-      internalID: 849186861834659194
+      spriteID: 0fb079b7b31837340800000000000000
+      internalID: 4860370515339447280
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GANZO_ESTATICO_1
+      name: GANZO_MUERTE_1
       rect:
         serializedVersion: 2
-        x: 33
+        x: 63
         y: 0
-        width: 30
-        height: 29
+        width: 34
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,52 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ffd9eead23df1bf30800000000000000
-      internalID: 4589727890130509311
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GANZO_ESTATICO_2
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 0
-        width: 30
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2e76305a6bcef90b0800000000000000
-      internalID: -5719592732540573726
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GANZO_ESTATICO_3
-      rect:
-        serializedVersion: 2
-        x: 98
-        y: 0
-        width: 30
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dcfe362e78f0e0b90800000000000000
-      internalID: -7273859271863570483
+      spriteID: 6001d3193b3ca1950800000000000000
+      internalID: 6420659394773323782
       vertices: []
       indices: 
       edges: []
@@ -209,11 +159,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      GANZO_ESTATICO_0: 849186861834659194
-      GANZO_ESTATICO_1: 4589727890130509311
-      GANZO_ESTATICO_2: -5719592732540573726
-      GANZO_ESTATICO_3: -7273859271863570483
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
