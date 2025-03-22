@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GANZO_DANO_0: 2042403706634324041
+      GANZO_DANO_1: -9136657422221416453
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
