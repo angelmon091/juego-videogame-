@@ -8,6 +8,7 @@ public class Enemcontroller : MonoBehaviour
     public float rangoDeAtaque = 5f; // Distancia para atacar
     public int daño = 10; // Daño al jugador
     public Animator animator; // Referencia al Animator
+    public float fuerzaRebote = 10f; 
 
     private void Update()
     {
@@ -46,10 +47,20 @@ public class Enemcontroller : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player")) 
+        {
+            Vector2 direccionDanio = new Vector2(transform.position.x, 0);
+
+            collision.gameObject.GetComponent<playerController>().RecibeDanio(direccionDanio, 1);
+    }
+
     private void MoverHaciaJugador()
     {
         // Moverse hacia el jugador
         Vector2 direccion = (jugador.position - transform.position).normalized;
+        if (!recibiendoDanio) 
         transform.position = Vector2.MoveTowards(transform.position, jugador.position, velocidad * Time.deltaTime);
     }
 
