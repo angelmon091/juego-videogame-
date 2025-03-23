@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cosa_peluda_musgosa_dano_0: 143556242321152528
+      cosa_peluda_musgosa_dano_1: 1980996537280045338
+      cosa_peluda_musgosa_dano_2: -7662222006381453496
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

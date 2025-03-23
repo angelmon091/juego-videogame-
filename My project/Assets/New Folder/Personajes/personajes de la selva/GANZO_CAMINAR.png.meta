@@ -259,7 +259,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GANZO_CAMINAR_0: 8974895298716439040
+      GANZO_CAMINAR_1: 5636607740130406384
+      GANZO_CAMINAR_2: 30031575768461901
+      GANZO_CAMINAR_3: 479752867736779609
+      GANZO_CAMINAR_4: 7835490533204067843
+      GANZO_CAMINAR_5: -7938275358299917617
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

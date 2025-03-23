@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GANZO_ATAQUE_0: 2060782448319256007
+      GANZO_ATAQUE_1: 4515999390863376607
+      GANZO_ATAQUE_2: -5892910825875921072
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

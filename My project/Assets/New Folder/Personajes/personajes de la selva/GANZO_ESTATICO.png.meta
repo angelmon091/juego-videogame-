@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GANZO_ESTATICO_0: 849186861834659194
+      GANZO_ESTATICO_1: 4589727890130509311
+      GANZO_ESTATICO_2: -5719592732540573726
+      GANZO_ESTATICO_3: -7273859271863570483
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

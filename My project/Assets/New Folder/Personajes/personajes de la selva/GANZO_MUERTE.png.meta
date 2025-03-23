@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GANZO_MUERTE_0: 4860370515339447280
+      GANZO_MUERTE_1: 6420659394773323782
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
