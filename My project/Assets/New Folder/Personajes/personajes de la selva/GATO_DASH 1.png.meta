@@ -334,7 +334,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GATO_DASH 1_0: 827738307845317959
+      GATO_DASH 1_1: -8630280294272102328
+      GATO_DASH 1_2: 2793130598204074345
+      GATO_DASH 1_3: 7281868845485515987
+      GATO_DASH 1_4: 7476750485685993962
+      GATO_DASH 1_5: 8168027050818000459
+      GATO_DASH 1_6: -7692903460991768516
+      GATO_DASH 1_7: -8676825171857343375
+      GATO_DASH 1_8: -845747066471339071
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
