@@ -3,12 +3,12 @@ using UnityEngine;
 public class Playercontroller : MonoBehaviour
 {
     // Configuración básica
-    public float velocidad = 5f; // Velocidad de movimiento normal
-    public float velocidadSprint = 10f; // Velocidad del sprint
+    public float velocidad = 4f; // Velocidad de movimiento normal
+    public float velocidadSprint = 5f; // Velocidad del sprint
     public float duracionSprint = 0.5f; // Duración del sprint en segundos
-    public float cooldownSprint = 10f; // Cooldown del sprint en segundos
+    public float cooldownSprint = 50f; // Cooldown del sprint en segundos
     public int vida = 10; // Vida del jugador
-    public int dañoAtaque = 5; // Daño que hace el jugador
+    public int dañoAtaque = 2; // Daño que hace el jugador
 
     // Referencias
     public Animator animator; // Referencia al Animator

@@ -6,8 +6,8 @@ public class Enemigo : MonoBehaviour
     public float velocidad = 3f; // Velocidad de movimiento del enemigo
     public int vida = 5; // Vida del enemigo
     public int dañoAtaque = 1; // Daño que hace el enemigo
-    public float rangoDeteccion = 5f; // Rango para detectar al jugador
-    public float rangoAtaque = 1.5f; // Rango para atacar al jugador
+    public float rangoDeteccion = 10f; // Rango para detectar al jugador
+    public float rangoAtaque = 2f; // Rango para atacar al jugador
 
     // Referencias
     public Animator animator; // Referencia al Animator
