@@ -6,12 +6,14 @@ public class Enemigo : MonoBehaviour
     public float velocidad = 3f; // Velocidad de movimiento del enemigo
     public int vida = 5; // Vida del enemigo
     public int dañoAtaque = 1; // Daño que hace el enemigo
-    public float rangoDeteccion = 10f; // Rango para detectar al jugador
-    public float rangoAtaque = 2f; // Rango para atacar al jugador
+    public float rangoDeteccion = 5f; // Rango para detectar al jugador
+    public float rangoAtaque = 1.5f; // Rango para atacar al jugador
 
     // Referencias
     public Animator animator; // Referencia al Animator
     private Transform jugador; // Referencia al jugador
+
+    private bool estaMuerto = false; // Para verificar si el enemigo ha muerto
 
     private void Start()
     {
@@ -21,6 +23,9 @@ public class Enemigo : MonoBehaviour
 
     private void Update()
     {
+        // Si el enemigo está muerto, no hacer nada
+        if (estaMuerto) return;
+
         // Calcular la distancia al jugador
         float distanciaAlJugador = Vector2.Distance(transform.position, jugador.position);
 
@@ -52,7 +57,7 @@ public class Enemigo : MonoBehaviour
         // Calcular la dirección hacia el jugador
         Vector2 direccion = (jugador.position - transform.position).normalized;
 
-        // Mover al enemigo hacia el jugadorjugadorjugadorjugadorjugadorjuga
+        // Mover al enemigo hacia el jugador
         transform.Translate(direccion * velocidad * Time.deltaTime);
 
         // Girar el sprite según la dirección del movimiento
@@ -79,8 +84,11 @@ public class Enemigo : MonoBehaviour
         // Reducir la vida
         vida -= daño;
 
-        // Activar la animación de daño
-        animator.SetTrigger("Danio");
+        // Activar la animación de daño solo si el enemigo no ha muerto
+        if (vida > 0)
+        {
+            animator.SetTrigger("Danio");
+        }
 
         // Verificar si el enemigo ha muerto
         if (vida <= 0)
@@ -91,11 +99,21 @@ public class Enemigo : MonoBehaviour
 
     private void Morir()
     {
+        // Marcar que el enemigo ha muerto
+        estaMuerto = true;
+
         // Activar la animación de muerte
         animator.SetTrigger("Muerte");
 
-        // Desactivar el enemigo o eliminarlo del juego
+        // Desactivar el enemigo después de un breve retraso (para que la animación de muerte se reproduzca)
+        Invoke("DesactivarPato", 2.8f); // Ajusta el tiempo según la duración de la animación de muerte
+
         Debug.Log("Enemigo ha muerto.");
+    }
+
+    private void DesactivarPato()
+    {
+        // Desactivar el enemigo
         gameObject.SetActive(false);
     }
 }
