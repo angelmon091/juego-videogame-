@@ -106,7 +106,7 @@ public class Enemigo : MonoBehaviour
         animator.SetTrigger("Muerte");
 
         // Desactivar el enemigo después de un breve retraso (para que la animación de muerte se reproduzca)
-        Invoke("DesactivarPato", 2.8f); // Ajusta el tiempo según la duración de la animación de muerte
+        Invoke("DesactivarPato", 1.5f); // Ajusta el tiempo según la duración de la animación de muerte
 
         Debug.Log("Enemigo ha muerto.");
     }

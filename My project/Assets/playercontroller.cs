@@ -3,12 +3,14 @@ using UnityEngine;
 public class Playercontroller : MonoBehaviour
 {
     // Configuración básica
-    public float velocidad = 4f; // Velocidad de movimiento normal
-    public float velocidadSprint = 5f; // Velocidad del sprint
+    public float velocidad = 5f; // Velocidad de movimiento normal
+    public float velocidadSprint = 10f; // Velocidad del sprint
     public float duracionSprint = 0.5f; // Duración del sprint en segundos
-    public float cooldownSprint = 50f; // Cooldown del sprint en segundos
+    public float cooldownSprint = 10f; // Cooldown del sprint en segundos
     public int vida = 10; // Vida del jugador
-    public int dañoAtaque = 2; // Daño que hace el jugador
+    public int dañoAtaque = 5; // Daño que hace el jugador
+    public float rangoAtaque = 1.5f; // Rango de ataque del jugador
+    public LayerMask capaEnemigos; // Capa para filtrar enemigos
 
     // Referencias
     public Animator animator; // Referencia al Animator
@@ -126,12 +128,14 @@ public class Playercontroller : MonoBehaviour
         // Llamar a un método para permitir el movimiento después de la animación
         Invoke("TerminarAtaque", 0.5f); // Ajusta el tiempo según la duración de la animación de ataque
 
-        // Detectar si el ataque golpea a un enemigo
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.localScale.x > 0 ? Vector2.right : Vector2.left, 1.5f);
-        if (hit.collider != null && hit.collider.CompareTag("Enemigo"))
+        // Detectar enemigos dentro del rango de ataque
+        Collider2D[] enemigos = Physics2D.OverlapCircleAll(transform.position, rangoAtaque, capaEnemigos);
+
+        foreach (Collider2D enemigo in enemigos)
         {
             // Aplicar daño al enemigo
-            hit.collider.GetComponent<Enemigo>().RecibirDaño(dañoAtaque);
+            enemigo.GetComponent<Enemigo>().RecibirDaño(dañoAtaque);
+            Debug.Log("Ataque golpeó al enemigo: " + enemigo.name);
         }
     }
 
@@ -155,5 +159,12 @@ public class Playercontroller : MonoBehaviour
             Debug.Log("Jugador ha perdido toda su vida.");
             // Aquí puedes agregar lógica adicional, como mostrar un mensaje de derrota.
         }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        // Dibujar el rango de ataque en el editor
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, rangoAtaque);
     }
 }
