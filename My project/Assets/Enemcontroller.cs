@@ -1,64 +1,101 @@
 using UnityEngine;
-using System;
 
-public class Enemcontroller : MonoBehaviour
+public class Enemigo : MonoBehaviour
 {
-    public Transform jugador; // Referencia al jugador
-    public float velocidad = 2f; // Velocidad de movimiento
-    public float rangoDeAtaque = 5f; // Distancia para atacar
-    public int daño = 10; // Daño al jugador
+    // Configuración básica
+    public float velocidad = 3f; // Velocidad de movimiento del enemigo
+    public int vida = 5; // Vida del enemigo
+    public int dañoAtaque = 1; // Daño que hace el enemigo
+    public float rangoDeteccion = 5f; // Rango para detectar al jugador
+    public float rangoAtaque = 1.5f; // Rango para atacar al jugador
+
+    // Referencias
     public Animator animator; // Referencia al Animator
+    private Transform jugador; // Referencia al jugador
+
+    private void Start()
+    {
+        // Obtener la referencia al jugador
+        jugador = GameObject.FindGameObjectWithTag("Player").transform;
+    }
 
     private void Update()
     {
         // Calcular la distancia al jugador
-        float distancia = Vector2.Distance(transform.position, jugador.position);
+        float distanciaAlJugador = Vector2.Distance(transform.position, jugador.position);
 
-        float velocidadX = Input.GetAxis("Horizontal") * Time.deltaTime * velocidad;
-
-        float velocidadY = Input.GetAxis("Vertical") * Time.deltaTime * velocidad;
-
-        animator.SetFloat("movement", Math.Abs(velocidadX * velocidad));
-
-        if (velocidadX < 0)
+        // Si el jugador está dentro del rango de detección, moverse hacia él
+        if (distanciaAlJugador <= rangoDeteccion)
         {
-            transform.localScale = new Vector2(-1, 1);
-        }
-        else if (velocidadX > 0)
-        {
-            transform.localScale = new Vector2(1, 1);
-        }
+            MoverseHaciaJugador();
 
-        Vector2 posicion = transform.position;
-
-        transform.position = new Vector2(velocidadX + posicion.x, posicion.y + velocidadY);
-
-        // Moverse hacia el jugador si está fuera del rango de ataque
-        if (distancia > rangoDeAtaque)
-        {
-            MoverHaciaJugador();
-            animator.SetBool("isAtacando", false); // Desactiva la animación de ataque
+            // Si el jugador está dentro del rango de ataque, atacar
+            if (distanciaAlJugador <= rangoAtaque)
+            {
+                Atacar();
+            }
+            else
+            {
+                // Desactivar la animación de ataque si el jugador está fuera del rango de ataque
+                animator.SetBool("Atacando", false);
+            }
         }
         else
         {
-            AtacarJugador();
-            
+            // Desactivar la animación de caminar si el jugador está fuera del rango de detección
+            animator.SetBool("Caminandom", false);
         }
     }
 
-    private void MoverHaciaJugador()
+    private void MoverseHaciaJugador()
     {
-        // Moverse hacia el jugador
+        // Calcular la dirección hacia el jugador
         Vector2 direccion = (jugador.position - transform.position).normalized;
-        transform.position = Vector2.MoveTowards(transform.position, jugador.position, velocidad * Time.deltaTime);
+
+        // Mover al enemigo hacia el jugadorjugadorjugadorjugadorjugadorjuga
+        transform.Translate(direccion * velocidad * Time.deltaTime);
+
+        // Girar el sprite según la dirección del movimiento
+        if (direccion.x != 0)
+        {
+            transform.localScale = new Vector2(Mathf.Sign(direccion.x), 1);
+        }
+
+        // Activar la animación de caminar
+        animator.SetBool("Caminandom", true);
     }
 
-    private void AtacarJugador()
+    private void Atacar()
     {
-        // Lógica para atacar al jugador
-        animator.SetBool("isAtacando", true); // Activa la animación de ataque
-        Debug.Log("Atacando al jugador, daño: " + daño);
-        // Aquí puedes añadir lógica para aplicar daño al jugador
+        // Activar la animación de ataque
+        animator.SetBool("Atacando", true);
+
+        // Aplicar daño al jugador
+        jugador.GetComponent<Playercontroller>().RecibirDaño(dañoAtaque);
+    }
+
+    public void RecibirDaño(int daño)
+    {
+        // Reducir la vida
+        vida -= daño;
+
+        // Activar la animación de daño
+        animator.SetTrigger("Danio");
+
+        // Verificar si el enemigo ha muerto
+        if (vida <= 0)
+        {
+            Morir();
+        }
+    }
+
+    private void Morir()
+    {
+        // Activar la animación de muerte
+        animator.SetTrigger("Muerte");
+
+        // Desactivar el enemigo o eliminarlo del juego
+        Debug.Log("Enemigo ha muerto.");
+        gameObject.SetActive(false);
     }
 }
-
