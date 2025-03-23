@@ -1165,7 +1165,7 @@ AudioSource:
   m_GameObject: {fileID: 356389784}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: ca43918f40f1506438ec5deedb06cc11, type: 2}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: c9a15d13624744c44a5ea25342c7b668, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
@@ -1556,8 +1556,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1220605472}
-        m_TargetAssemblyTypeName: Menu_inicial, Assembly-CSharp
+      - m_Target: {fileID: 1220605477}
+        m_TargetAssemblyTypeName: Menu_Inicial, Assembly-CSharp
         m_MethodName: Salir
         m_Mode: 1
         m_Arguments:
@@ -1922,7 +1922,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1220605471}
+      - m_Target: {fileID: 1220605476}
         m_TargetAssemblyTypeName: Menu_Opciones, Assembly-CSharp
         m_MethodName: CambiarCalidad
         m_Mode: 0
@@ -2092,8 +2092,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1220605472}
-        m_TargetAssemblyTypeName: Menu_inicial, Assembly-CSharp
+      - m_Target: {fileID: 1220605477}
+        m_TargetAssemblyTypeName: Menu_Inicial, Assembly-CSharp
         m_MethodName: Jugar
         m_Mode: 1
         m_Arguments:
@@ -2673,8 +2673,8 @@ GameObject:
   - component: {fileID: 1220605475}
   - component: {fileID: 1220605474}
   - component: {fileID: 1220605473}
-  - component: {fileID: 1220605472}
-  - component: {fileID: 1220605471}
+  - component: {fileID: 1220605476}
+  - component: {fileID: 1220605477}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2703,31 +2703,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1220605471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1220605469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7327f0c3c730874096ee3ab86499fe1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: ca43918f40f1506438ec5deedb06cc11, type: 2}
---- !u!114 &1220605472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1220605469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a59f2ba178461742a021f54dec1c0b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1220605473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2791,6 +2766,31 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1220605476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220605469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc590ee5d494d8c46a2352edce2d2c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 0}
+--- !u!114 &1220605477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220605469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32affbffd65a35c418ee5d941ec9ea32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1299287475
 GameObject:
   m_ObjectHideFlags: 0
@@ -3018,7 +3018,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1220605471}
+      - m_Target: {fileID: 1220605476}
         m_TargetAssemblyTypeName: Menu_Opciones, Assembly-CSharp
         m_MethodName: CambiarVolumen
         m_Mode: 0
@@ -3886,7 +3886,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1220605471}
+      - m_Target: {fileID: 1220605476}
         m_TargetAssemblyTypeName: Menu_Opciones, Assembly-CSharp
         m_MethodName: PantallaCompleta
         m_Mode: 0
@@ -4024,7 +4024,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1880562872
