@@ -935,7 +935,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'vOLUMEN:'
+  m_text: 'vOLUME:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 538c2814bb0a6b54d9e1f265fd6df3d3, type: 2}
   m_sharedMaterial: {fileID: 5256307800087728104, guid: 538c2814bb0a6b54d9e1f265fd6df3d3, type: 2}
@@ -1518,7 +1518,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PANTALLA COMPLETA
+  m_text: FULLSCREEN
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 538c2814bb0a6b54d9e1f265fd6df3d3, type: 2}
   m_sharedMaterial: {fileID: 5256307800087728104, guid: 538c2814bb0a6b54d9e1f265fd6df3d3, type: 2}
@@ -1765,13 +1765,13 @@ MonoBehaviour:
   m_MultiSelect: 0
   m_Options:
     m_Options:
-    - m_Text: Baja
+    - m_Text: LOW
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Media
+    - m_Text: normal
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Alta
+    - m_Text: high
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_OnValueChanged:
@@ -2908,7 +2908,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Alta
+  m_text: high
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 538c2814bb0a6b54d9e1f265fd6df3d3, type: 2}
   m_sharedMaterial: {fileID: 5256307800087728104, guid: 538c2814bb0a6b54d9e1f265fd6df3d3, type: 2}
@@ -3432,7 +3432,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: universe
+  m_text: multiverse
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 538c2814bb0a6b54d9e1f265fd6df3d3, type: 2}
   m_sharedMaterial: {fileID: 5256307800087728104, guid: 538c2814bb0a6b54d9e1f265fd6df3d3, type: 2}
@@ -4330,7 +4330,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Calidad:'
+  m_text: 'qUALIITY:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 538c2814bb0a6b54d9e1f265fd6df3d3, type: 2}
   m_sharedMaterial: {fileID: 5256307800087728104, guid: 538c2814bb0a6b54d9e1f265fd6df3d3, type: 2}
