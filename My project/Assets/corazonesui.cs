@@ -10,11 +10,11 @@ public class corazonesui : MonoBehaviour
 {
     public List<Image> listaCorazones;
     public GameObject corazonesPrefab;
-    public Playercontroller vidajugador;
+    public Playercontroller vidajugador; // Asegúrate de que esta variable esté asignada en el Inspector
     public int indexActual;
     public Sprite corazonLleno;
-    public Sprite corazonMitad; // Añadido para el corazón a la mitad
     public Sprite corazonVacio;
+    public Sprite corazonMitad;
 
     private void Awake()
     {
@@ -35,33 +35,18 @@ public class corazonesui : MonoBehaviour
 
     private void CrearCorazones(int cantidadmaximavida)
     {
-        for (int i = 0; i < cantidadmaximavida / 2; i++)
+        for (int i = 0; i < cantidadmaximavida; i++)
         {
             GameObject corazon = Instantiate(corazonesPrefab, transform);
             listaCorazones.Add(corazon.GetComponent<Image>());
         }
-        indexActual = listaCorazones.Count - 1;
+        indexActual = cantidadmaximavida - 1;
     }
 
     private void CambiarVida(int vidaActual)
     {
         int vidaRestante = vidaActual;
-        for (int i = 0; i < listaCorazones.Count; i++)
-        {
-            if (vidaRestante >= 2)
-            {
-                listaCorazones[i].sprite = corazonLleno;
-                vidaRestante -= 2;
-            }
-            else if (vidaRestante == 1)
-            {
-                listaCorazones[i].sprite = corazonMitad;
-                vidaRestante = 0;
-            }
-            else
-            {
-                listaCorazones[i].sprite = corazonVacio;
-            }
-        }
+        
+        // Implementa aquí la lógica para cambiar la vida
     }
 }
