@@ -65,11 +65,13 @@ public class Playercontroller : MonoBehaviour
         float movimientoX = Input.GetAxis("Horizontal");
         float movimientoY = Input.GetAxis("Vertical");
 
-        // Crear el vector de movimiento
         Vector2 movimiento = new Vector2(movimientoX, movimientoY).normalized;
 
+        // Crear el vector de movimiento
+        Vector2 velocidadCalculada = movimiento * velocidad;
+
         // Mover al jugador
-        transform.Translate(movimiento * velocidad * Time.deltaTime);
+        rb.MovePosition((Vector2)transform.position + velocidadCalculada * Time.deltaTime);
 
         // Animación de movimiento
         animator.SetFloat("movement", movimiento.magnitude);
