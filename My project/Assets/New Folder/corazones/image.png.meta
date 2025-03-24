@@ -119,67 +119,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gato, vidas_0
+      name: image_0
       rect:
         serializedVersion: 2
-        x: 4
+        x: 2
         y: 0
-        width: 24
-        height: 24
+        width: 28
+        height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 17324cc57869fff30800000000000000
-      internalID: 4611570051571786609
+      spriteID: 51c1413cc0d99664d82985c8c0b7d57d
+      internalID: 1102458728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gato, vidas_1
+      name: image_1
       rect:
         serializedVersion: 2
-        x: 36
+        x: 34
         y: 0
-        width: 24
-        height: 24
+        width: 28
+        height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f6eacb3e15d8c02e0800000000000000
-      internalID: -2158194738564649361
+      spriteID: 9af9d9a5868a34c48b75e0c343c08fb5
+      internalID: -1467291815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gato, vidas_2
+      name: image_2
       rect:
         serializedVersion: 2
-        x: 68
+        x: 66
         y: 0
-        width: 24
-        height: 24
+        width: 28
+        height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fb3129f51672645e0800000000000000
-      internalID: -1925808491485588545
+      spriteID: 25222b3ca982af14b91a9d176e7774db
+      internalID: 729380361
       vertices: []
       indices: 
       edges: []
@@ -188,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 3eeb7fae20f63c9409f79c34dcbd2d94
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      gato, vidas_0: 4611570051571786609
-      gato, vidas_1: -2158194738564649361
-      gato, vidas_2: -1925808491485588545
+      image_0: 1102458728
+      image_1: -1467291815
+      image_2: 729380361
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

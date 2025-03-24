@@ -2,12 +2,14 @@ using UnityEngine;
 
 public class Enemigo : MonoBehaviour
 {
-    // ConfiguraciÛn b·sica
+    // Configuraci√≥n b√°sica
     public float velocidad = 3f; // Velocidad de movimiento del enemigo
     public int vida = 5; // Vida del enemigo
-    public int daÒoAtaque = 1; // DaÒo que hace el enemigo
+    public int da√±oAtaque = 1; // Da√±o que hace el enemigo
     public float rangoDeteccion = 5f; // Rango para detectar al jugador
     public float rangoAtaque = 1.5f; // Rango para atacar al jugador
+    public float tiempoEntreAtaques = 2f; // Tiempo entre ataques (2 segundos)
+    private float tiempoSiguienteAtaque = 0f; // Tiempo para el siguiente ataque
 
     // Referencias
     public Animator animator; // Referencia al Animator
@@ -23,68 +25,73 @@ public class Enemigo : MonoBehaviour
 
     private void Update()
     {
-        // Si el enemigo est· muerto, no hacer nada
+        // Si el enemigo est√° muerto, no hacer nada
         if (estaMuerto) return;
 
         // Calcular la distancia al jugador
         float distanciaAlJugador = Vector2.Distance(transform.position, jugador.position);
 
-        // Si el jugador est· dentro del rango de detecciÛn, moverse hacia Èl
+        // Si el jugador est√° dentro del rango de detecci√≥n, moverse hacia √©l
         if (distanciaAlJugador <= rangoDeteccion)
         {
             MoverseHaciaJugador();
 
-            // Si el jugador est· dentro del rango de ataque, atacar
+            // Si el jugador est√° dentro del rango de ataque, atacar
             if (distanciaAlJugador <= rangoAtaque)
             {
-                Atacar();
+                // Verificar si ha pasado el tiempo suficiente desde el √∫ltimo ataque
+                if (Time.time >= tiempoSiguienteAtaque)
+                {
+                    Atacar();
+                    tiempoSiguienteAtaque = Time.time + tiempoEntreAtaques; // Actualizar el tiempo del siguiente ataque
+                }
             }
             else
             {
-                // Desactivar la animaciÛn de ataque si el jugador est· fuera del rango de ataque
+                // Desactivar la animaci√≥n de ataque si el jugador est√° fuera del rango de ataque
                 animator.SetBool("Atacando", false);
             }
         }
         else
         {
-            // Desactivar la animaciÛn de caminar si el jugador est· fuera del rango de detecciÛn
+            // Desactivar la animaci√≥n de caminar si el jugador est√° fuera del rango de detecci√≥n
             animator.SetBool("Caminandom", false);
         }
     }
 
     private void MoverseHaciaJugador()
     {
-        // Calcular la direcciÛn hacia el jugador
+        // Calcular la direcci√≥n hacia el jugador
         Vector2 direccion = (jugador.position - transform.position).normalized;
 
         // Mover al enemigo hacia el jugador
         transform.Translate(direccion * velocidad * Time.deltaTime);
 
-        // Girar el sprite seg˙n la direcciÛn del movimiento
+        // Girar el sprite seg√∫n la direcci√≥n del movimiento
         if (direccion.x != 0)
         {
             transform.localScale = new Vector2(Mathf.Sign(direccion.x), 1);
         }
 
-        // Activar la animaciÛn de caminar
+        // Activar la animaci√≥n de caminar
         animator.SetBool("Caminandom", true);
     }
 
     private void Atacar()
     {
-        // Activar la animaciÛn de ataque
+        // Activar la animaci√≥n de ataque
         animator.SetBool("Atacando", true);
 
-        // Aplicar daÒo al jugador
-        jugador.GetComponent<Playercontroller>().RecibirDaÒo(daÒoAtaque);
+        // Aplicar da√±o al jugador
+        jugador.GetComponent<Playercontroller>().RecibirDa√±o(da√±oAtaque);
     }
 
-    public void RecibirDaÒo(int daÒo)
+    public void RecibirDa√±o(int da√±o)
     {
         // Reducir la vida
-        vida -= daÒo;
+        vida -= da√±o;
 
-        // Activar la animaciÛn de daÒo solo si el enemigo no ha muerto
+        // Activar la animaci√≥n de da√±o solo si el enemigo no ha muerto
         if (vida > 0)
         {
             animator.SetTrigger("Danio");
@@ -102,11 +109,11 @@ public class Enemigo : MonoBehaviour
         // Marcar que el enemigo ha muerto
         estaMuerto = true;
 
-        // Activar la animaciÛn de muerte
+        // Activar la animaci√≥n de muerte
         animator.SetTrigger("Muerte");
 
-        // Desactivar el enemigo despuÈs de un breve retraso (para que la animaciÛn de muerte se reproduzca)
-        Invoke("DesactivarPato", 1.5f); // Ajusta el tiempo seg˙n la duraciÛn de la animaciÛn de muerte
+        // Desactivar el enemigo despu√©s de un breve retraso (para que la animaci√≥n de muerte se reproduzca)
+        Invoke("DesactivarPato", 1.5f); // Ajusta el tiempo seg√∫n la duraci√≥n de la animaci√≥n de muerte
 
         Debug.Log("Enemigo ha muerto.");
     }
