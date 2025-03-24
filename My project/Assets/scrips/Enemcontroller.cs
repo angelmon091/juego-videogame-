@@ -8,6 +8,8 @@ public class Enemigo : MonoBehaviour
     public int dañoAtaque = 1; // Daño que hace el enemigo
     public float rangoDeteccion = 5f; // Rango para detectar al jugador
     public float rangoAtaque = 1.5f; // Rango para atacar al jugador
+    public float tiempoEntreAtaques = 2f; // Tiempo entre ataques (2 segundos)
+    private float tiempoSiguienteAtaque = 0f; // Tiempo para el siguiente ataque
 
     // Referencias
     public Animator animator; // Referencia al Animator
@@ -37,7 +39,12 @@ public class Enemigo : MonoBehaviour
             // Si el jugador está dentro del rango de ataque, atacar
             if (distanciaAlJugador <= rangoAtaque)
             {
-                Atacar();
+                // Verificar si ha pasado el tiempo suficiente desde el último ataque
+                if (Time.time >= tiempoSiguienteAtaque)
+                {
+                    Atacar();
+                    tiempoSiguienteAtaque = Time.time + tiempoEntreAtaques; // Actualizar el tiempo del siguiente ataque
+                }
             }
             else
             {
