@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Playercontroller : MonoBehaviour
 {
@@ -15,6 +16,12 @@ public class Playercontroller : MonoBehaviour
     // Referencias
     public Animator animator; // Referencia al Animator
     private Rigidbody2D rb; // Referencia al Rigidbody2D
+    public int vidaActual;
+
+    public int vidaMaxima;
+
+    public UnityEvent<int> cambioVida;
+
 
     private bool estaAtacando = false; // Para verificar si el personaje está atacando
     private bool puedeSprint = true; // Para controlar el cooldown del sprint
@@ -23,6 +30,9 @@ public class Playercontroller : MonoBehaviour
     {
         // Obtener el componente Rigidbody2D
         rb = GetComponent<Rigidbody2D>();
+
+        vidaActual = vidaMaxima;
+        cambioVida.Invoke(vidaActual);
 
         // Desactivar la gravedad
         rb.gravityScale = 0f;
@@ -148,17 +158,44 @@ public class Playercontroller : MonoBehaviour
     public void RecibirDaño(int daño)
     {
         // Reducir la vida
-        vida -= daño;
-
+        int vidaTemporal = vidaActual - daño;
+        if (vidaTemporal<0)
+        {
+            vidaActual = 0;
+        }
+        else
+        {
+            vidaActual = vidaTemporal;
+        }
         // Activar la animación de daño
+        cambioVida.Invoke(vidaActual);
         animator.SetTrigger("Daño");
 
-        // Verificar si el jugador ha perdido toda su vida
-        if (vida <= 0)
+        if (vidaActual <= 0 )
         {
             Debug.Log("Jugador ha perdido toda su vida.");
             // Aquí puedes agregar lógica adicional, como mostrar un mensaje de derrota.
+            Destroy(gameObject);
         }
+
+
+    }
+
+    public void curarVida(int canitdadCuracion)
+    {
+        int vidaTemporal = vidaActual + canitdadCuracion;
+
+        if (vidaTemporal > vidaMaxima)
+        {
+            vidaActual = vidaMaxima;
+        }
+
+        else
+        {
+            vidaActual = vidaTemporal;
+        }
+
+        cambioVida.Invoke(vidaActual);
     }
 
     private void OnDrawGizmosSelected()
