@@ -25,7 +25,7 @@ public class Portal : MonoBehaviour
         objectToTeleport.position = linkedPortal.TransformPoint(relativePosition);
 
         // Mueve ligeramente al jugador para evitar que active el trigger del segundo portal
-        objectToTeleport.Translate(Vector2.up * 1f); // Mueve al jugador 0.1 unidades hacia arriba
+        objectToTeleport.Translate(Vector2.down * 2.5f); // Mueve al jugador 0.1 unidades hacia arriba
     }
 
     void ResetTeleport()
