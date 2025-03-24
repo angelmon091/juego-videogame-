@@ -165,6 +165,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -709,7 +722,31 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ARBOL_CAMINANDO_0: -3295344266552333650
+      ARBOL_CAMINANDO_1: -2445631578446408150
+      ARBOL_CAMINANDO_10: -5311864245713735887
+      ARBOL_CAMINANDO_11: -285139233622950141
+      ARBOL_CAMINANDO_12: 1423229577001858253
+      ARBOL_CAMINANDO_13: 4178881190204741659
+      ARBOL_CAMINANDO_14: 3051645130728460772
+      ARBOL_CAMINANDO_15: -498138896021651914
+      ARBOL_CAMINANDO_16: 1644936232781072221
+      ARBOL_CAMINANDO_17: -6120265309195761610
+      ARBOL_CAMINANDO_18: 1874789487260739344
+      ARBOL_CAMINANDO_19: 566348759005269174
+      ARBOL_CAMINANDO_2: 6490189934295974103
+      ARBOL_CAMINANDO_20: -7416638311415884255
+      ARBOL_CAMINANDO_21: 9178367436016448583
+      ARBOL_CAMINANDO_22: 314312120298269487
+      ARBOL_CAMINANDO_23: -3238887732374835694
+      ARBOL_CAMINANDO_3: 3074356783766423897
+      ARBOL_CAMINANDO_4: -5734572255412042127
+      ARBOL_CAMINANDO_5: 5229491406345551666
+      ARBOL_CAMINANDO_6: -1640621661428168762
+      ARBOL_CAMINANDO_7: 3045086137894715688
+      ARBOL_CAMINANDO_8: 1462115930176314537
+      ARBOL_CAMINANDO_9: -1507459124761693036
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

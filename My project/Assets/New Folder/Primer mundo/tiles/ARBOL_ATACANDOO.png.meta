@@ -147,6 +147,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -559,7 +572,25 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ARBOL_ATACANDOO_0: 6477402407520640171
+      ARBOL_ATACANDOO_1: 8691193205247712729
+      ARBOL_ATACANDOO_10: 6315674727157952730
+      ARBOL_ATACANDOO_11: -2439166474026007868
+      ARBOL_ATACANDOO_12: -2730253260259221159
+      ARBOL_ATACANDOO_13: 7833375050270559100
+      ARBOL_ATACANDOO_14: -8669026130789861072
+      ARBOL_ATACANDOO_15: -7914729015121129335
+      ARBOL_ATACANDOO_16: -3479995157875217034
+      ARBOL_ATACANDOO_17: 2977350542341183555
+      ARBOL_ATACANDOO_2: -62414252150770692
+      ARBOL_ATACANDOO_3: 6029825326517603861
+      ARBOL_ATACANDOO_4: 837239655392874738
+      ARBOL_ATACANDOO_5: -89700508297826918
+      ARBOL_ATACANDOO_6: -4896239500839893626
+      ARBOL_ATACANDOO_7: 7691784012992523271
+      ARBOL_ATACANDOO_8: -6684125477616832001
+      ARBOL_ATACANDOO_9: -2969521447771432302
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
