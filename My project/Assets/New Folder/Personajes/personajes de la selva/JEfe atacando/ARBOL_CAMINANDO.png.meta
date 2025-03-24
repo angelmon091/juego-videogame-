@@ -1,0 +1,388 @@
+fileFormatVersion: 2
+guid: f1cc101fe8a4f6246a695ca125c3d484
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3295344266552333650
+    second: ARBOL_CAMINANDO_0
+  - first:
+      213: -2445631578446408150
+    second: ARBOL_CAMINANDO_1
+  - first:
+      213: 6490189934295974103
+    second: ARBOL_CAMINANDO_2
+  - first:
+      213: 3074356783766423897
+    second: ARBOL_CAMINANDO_3
+  - first:
+      213: -5734572255412042127
+    second: ARBOL_CAMINANDO_4
+  - first:
+      213: 5229491406345551666
+    second: ARBOL_CAMINANDO_5
+  - first:
+      213: -1640621661428168762
+    second: ARBOL_CAMINANDO_6
+  - first:
+      213: 3045086137894715688
+    second: ARBOL_CAMINANDO_7
+  - first:
+      213: 1462115930176314537
+    second: ARBOL_CAMINANDO_8
+  - first:
+      213: -1507459124761693036
+    second: ARBOL_CAMINANDO_9
+  - first:
+      213: -5311864245713735887
+    second: ARBOL_CAMINANDO_10
+  - first:
+      213: -285139233622950141
+    second: ARBOL_CAMINANDO_11
+  - first:
+      213: 1423229577001858253
+    second: ARBOL_CAMINANDO_12
+  - first:
+      213: 4178881190204741659
+    second: ARBOL_CAMINANDO_13
+  - first:
+      213: 3051645130728460772
+    second: ARBOL_CAMINANDO_14
+  - first:
+      213: -498138896021651914
+    second: ARBOL_CAMINANDO_15
+  - first:
+      213: 1644936232781072221
+    second: ARBOL_CAMINANDO_16
+  - first:
+      213: -6120265309195761610
+    second: ARBOL_CAMINANDO_17
+  - first:
+      213: 1874789487260739344
+    second: ARBOL_CAMINANDO_18
+  - first:
+      213: 566348759005269174
+    second: ARBOL_CAMINANDO_19
+  - first:
+      213: -7416638311415884255
+    second: ARBOL_CAMINANDO_20
+  - first:
+      213: 9178367436016448583
+    second: ARBOL_CAMINANDO_21
+  - first:
+      213: 314312120298269487
+    second: ARBOL_CAMINANDO_22
+  - first:
+      213: -3238887732374835694
+    second: ARBOL_CAMINANDO_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ARBOL_CAMINANDO_1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 58
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a265933790f5f0ed0800000000000000
+      internalID: -2445631578446408150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARBOL_CAMINANDO_4
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 0
+        width: 63
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 176ca51bae4ba60b0800000000000000
+      internalID: -5734572255412042127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARBOL_CAMINANDO_7
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 0
+        width: 64
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8214ea775b1524a20800000000000000
+      internalID: 3045086137894715688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARBOL_CAMINANDO_10
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 0
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13f622bac977846b0800000000000000
+      internalID: -5311864245713735887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARBOL_CAMINANDO_13
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 0
+        width: 65
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1817b44d4e5ef930800000000000000
+      internalID: 4178881190204741659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARBOL_CAMINANDO_16
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 0
+        width: 64
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d57c519d9ccf3d610800000000000000
+      internalID: 1644936232781072221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARBOL_CAMINANDO_19
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 0
+        width: 62
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bc0e7712331cd700800000000000000
+      internalID: 566348759005269174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARBOL_CAMINANDO_22
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 0
+        width: 63
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2b6af64539ac5400800000000000000
+      internalID: 314312120298269487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ARBOL_CAMINANDO_0
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 55
+        width: 5
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a65ee65f99107034995019d870bdb29d
+      internalID: -559638935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 031ac5aa64cd9424a9f14f8fcb0337cb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ARBOL_CAMINANDO_0: -559638935
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
