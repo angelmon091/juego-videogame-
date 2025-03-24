@@ -12,7 +12,7 @@ public class Menu_Opciones : MonoBehaviour
     }
     public void CambiarVolumen(float volumen)
     {
-        audioMixer.SetFloat("Volumen", volumen);
+        audioMixer.SetFloat("volumen", volumen);
     }
 
     public void CambiarCalidad(int index)
