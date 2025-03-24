@@ -1,5 +1,11 @@
+using System.Collections.Generic;
+using System.Collections;
+using System;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Linq;
+using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class Playercontroller : MonoBehaviour
 {
@@ -21,6 +27,7 @@ public class Playercontroller : MonoBehaviour
     public int vidaMaxima;
 
     public UnityEvent<int> cambioVida;
+    public UnityEvent Jugador_muerto;
 
 
     private bool estaAtacando = false; // Para verificar si el personaje está atacando
@@ -161,7 +168,7 @@ public class Playercontroller : MonoBehaviour
     {
         // Reducir la vida
         int vidaTemporal = vidaActual - daño;
-        if (vidaTemporal<0)
+        if (vidaTemporal < 0)
         {
             vidaActual = 0;
         }
@@ -173,11 +180,14 @@ public class Playercontroller : MonoBehaviour
         cambioVida.Invoke(vidaActual);
         animator.SetTrigger("Daño");
 
-        if (vidaActual <= 0 )
+        if (vidaActual <= 0)
         {
             Debug.Log("Jugador ha perdido toda su vida.");
             // Aquí puedes agregar lógica adicional, como mostrar un mensaje de derrota.
             Destroy(gameObject);
+            Time.timeScale = 0f;
+            Jugador_muerto.Invoke(); // Se invoca el evento, el otro script activara el menu.
+
         }
 
 
